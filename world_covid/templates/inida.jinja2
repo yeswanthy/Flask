@@ -1,0 +1,22 @@
+{% extends 'basic.jinja2' %}
+
+{% block content %}
+
+        <table border="2">
+        <TR>
+                <TH>State</TH>
+                <TH>Total Confirmed cases</TH>
+                <TH>Cured/Discharged</TH>
+                <TH>Deaths</TH>
+        </TR>
+        {% for state_name, data in states.items() %}
+		<TR>
+                        <TD> {{ state_name }}</TD>
+                        <TD> {{ data['Total Confirmed cases'] }}</TD>
+                        <TD> {{ data['Cured/Discharged'] }}</TD>
+                        <TD> {{ data['Death'] }}</TD>
+
+        {% endfor %}
+        </table>
+
+{% endblock %}

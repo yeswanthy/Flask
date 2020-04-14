@@ -1,0 +1,8 @@
+{% extends 'basic.jinja2' %}
+
+{% block content %}
+<h3>{{ state_data['state'] }}</h3>
+<p>Total Confirmed cases: {{ state_data['Total Confirmed cases'] }}</p>
+<p>Cured/Discharged: {{ state_data['Cured/Discharged'] }}</p>
+<p>Death: {{ state_data['Death'] }}</p>
+{% endblock %}

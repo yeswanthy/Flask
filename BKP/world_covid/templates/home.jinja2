@@ -1,0 +1,12 @@
+{% extends 'basic.jinja2' %}
+
+{% block content %}
+<h2>India COVID-19 State wise data</h2>
+<ul>
+	{% for state_name, data in states.items() %}
+		<li><a href="{{ url_for('state', state_name=state_name) }}">{{ data['state'] }}</a></li>
+	{% endfor %}
+</ul>
+
+
+{% endblock %}

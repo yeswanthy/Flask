@@ -1,0 +1,22 @@
+{% extends 'basic.jinja2' %}
+
+{% block content %}
+
+	<table border="2">
+	<TR>
+		<TH>Country</TH>
+		<TH>Total Confirmed cases</TH>
+		<TH>Cured/Discharged</TH>
+		<TH>Deaths</TH>
+	</TR>
+	{% for country, data in continents_data.items() %}
+		<TR>
+			<TD> {{ country }}</TD>
+			<TD> {{ data['Total'] }}</TD>
+			<TD> {{ data['Recovered'] }}</TD>
+			<TD> {{ data['Deaths'] }}</TD>
+
+	{% endfor %}
+	</table>
+
+{% endblock %}

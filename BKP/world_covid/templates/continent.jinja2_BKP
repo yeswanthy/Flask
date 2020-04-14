@@ -1,0 +1,14 @@
+{% extends 'basic.jinja2' %}
+
+{% block content %}
+
+
+	{% for country, data in continents_data.items() %}
+		<h3> {{ country }}</h3>
+		<p> Total Confirmed cases: {{ data['Total'] }}</p>
+		<p> Cured/Discharged: {{ data['Recovered'] }}</p>
+		<p> Deaths: {{ data['Deaths'] }}</p>
+
+	{% endfor %}
+
+{% endblock %}

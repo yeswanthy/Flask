@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        	<meta charset="utf-8">
+	        <title>COVID‑19 Information & Resources</title>
+        	<meta name="viewport" content="width=device-width, initial-scale=1">
+	        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	        <link rel="shortcut icon" href="{{ url_for('static', filename='covid.jpg') }}">
+	</head>
+	<body>
+	<header>
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">
+				<img style="max-width:100px; margin-top: -7px;" src="{{ url_for('static', filename='images/covid.jpg') }}">
+			</a>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Link</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Action</a></li>
+            					<li><a href="#">Another action</a></li>
+            					<li><a href="#">Something else here</a></li>
+            					<li role="separator" class="divider"></li>
+	            				<li><a href="#">Separated link</a></li>
+					</ul>
+				</li>
+			</ul>
+
+		</div>
+	</header>
+		<div>
+
+	        <!-- Nav tabs -->
+        	        <ul class="nav nav-tabs" role="tablist">
+                	        <li role="presentation" class="active"><a href="#OVERVIEW" aria-controls="home" role="tab" data-toggle="tab">OVERVIEW</a></li>
+                        	<li role="presentation"><a href="#SYMPTOMS" aria-controls="profile" role="tab" data-toggle="tab">SYMPTOMS</a></li>
+	                        <li role="presentation"><a href="#PREVENTION" aria-controls="messages" role="tab" data-toggle="tab">PREVENTION</a></li>
+        	                <li role="presentation"><a href="#PREVENTION" aria-controls="settings" role="tab" data-toggle="tab">TREATMENTS</a></li>
+                	</ul>
+	        <!-- Tab panes -->
+        	        <div class="tab-content">
+                	<div role="tabpanel" class="tab-pane fade in active" id="OVERVIEW">...</div>
+                	<div role="tabpanel" class="tab-pane fade" id="SYMPTOMS">...</div>
+	                <div role="tabpanel" class="tab-pane fade" id="PREVENTION">...</div>
+        	        <div role="tabpanel" class="tab-pane fade" id="TREATMENTS">...</div>
+			</div>
+
+		</div>
+
+	</body>
+</html>

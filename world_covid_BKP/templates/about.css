@@ -1,0 +1,15 @@
+body{
+  font-family: 'Montserrat';
+  text-align: center;
+  background-color: #59d5d8;
+  border: 60px solid #FDFFFC;
+  border-top: 0px;
+  /*border-bottom: 0px;*/
+  margin: 0px;
+  padding: 32px
+}
+
+.about li{
+	list-style: inside;
+}
+

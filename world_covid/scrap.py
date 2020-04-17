@@ -23,7 +23,9 @@ class IndiaData:
 
     def state_wise_date(self):
         all_data = self.state_data
-        total_data = all_data.pop()
+        # total_data = all_data.pop()
+        K = 2
+        all_data = all_data[: len(all_data) - K]
         my_dict = {}
         for state in all_data:
             no, state_name, total, cured, death = state

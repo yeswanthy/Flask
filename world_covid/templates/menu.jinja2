@@ -1,13 +1,25 @@
 {% extends 'basic.jinja2' %}
 
 {% block content %}
-<h2>World COVID-19 data</h2>
-<ul>
-	{% for continent in continents %}
-		<li><a href="{{ url_for('continent', continent=continent) }}">{{ continent }}</a></li>
-	{% endfor %}
-</ul>
+<body class"main">
+        <div id="wrapper">
+                <header>
+                        <h1>COVID-19 CORONAVIRUS PANDEMIC</h1>
+                </header>
+                <nav>
+                        <ul class="main_menu">
+                                <li><a href="{{ url_for('about') }}"> About&nbsp;&nbsp;&nbsp;&nbsp; </a></li>
+                                <li><a href="{{ url_for('global_data') }}"> Global data&nbsp;&nbsp;&nbsp;&nbsp; </a></li>
+                                <li><a href="{{ url_for('india') }}"> India data&nbsp;&nbsp;&nbsp;&nbsp; </a></li>
 
-<h3><a href="{{ url_for('india', state_name=state_name) }}">India COVID-19 data</h3>
-
+                        </ul>
+                </nav>
+                <h1 class="cases">Global Coronavirus Cases:</h1>
+                <p>{{ total['Total cases'] }}</p>
+                <h1 class="cases">Deaths:</h1>
+                <p>{{ total['Deaths'] }}</p>
+                <h1 class="cases">Recovered:</h1>
+                <p>{{ total['Recovered'] }}</p>
+        </div>
+</body>
 {% endblock %}

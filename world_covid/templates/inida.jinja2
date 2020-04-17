@@ -2,21 +2,28 @@
 
 {% block content %}
 
-        <table border="2">
-        <TR>
-                <TH>State</TH>
-                <TH>Total Confirmed cases</TH>
-                <TH>Cured/Discharged</TH>
-                <TH>Deaths</TH>
-        </TR>
-        {% for state_name, data in states.items() %}
-		<TR>
-                        <TD> {{ state_name }}</TD>
-                        <TD> {{ data['Total Confirmed cases'] }}</TD>
-                        <TD> {{ data['Cured/Discharged'] }}</TD>
-                        <TD> {{ data['Death'] }}</TD>
+<body class='content-table'>
+	<a href="{{ url_for('menu') }}">Home</a>
+	<table class="content-table">
+		<thead>
+			<tr>
+				<th>State</th>
+				<th>Total Confirmed cases</th>
+				<th>Cured/Discharged</th>
+				<th>Deaths</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for state_name, data in states.items() %}
+				<tr>
+					<td>{{ state_name }}</td>
+					<td>{{ data['Total Confirmed cases'] }}</td>
+					<td>{{ data['Cured/Discharged'] }}</td>
+					<td>{{ data['Death'] }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
 
-        {% endfor %}
-        </table>
-
+</body>
 {% endblock %}

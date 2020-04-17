@@ -1,0 +1,30 @@
+{% extends 'basic.jinja2' %}
+
+{% block content %}
+
+<body class='content-table'>
+	<a href="{{ url_for('menu') }}">Home</a>
+
+	<table class="content-table">
+		<thead>
+			<tr>
+				<th>Country</th>
+				<th>Total Confirmed cases</th>
+				<th>Cured/Discharged</th>
+				<th>Deaths</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for Country_name, data in global_data.items() %}
+				<tr>
+					<td>{{ Country_name }}</td>
+					<td>{{ data['Total cases'] }}</td>
+					<td>{{ data['Recovered'] }}</td>
+					<td>{{ data['Deaths'] }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</body>
+{% endblock %}

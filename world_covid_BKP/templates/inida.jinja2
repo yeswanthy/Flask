@@ -1,0 +1,29 @@
+{% extends 'basic.jinja2' %}
+
+{% block content %}
+
+<body class='content-table'>
+
+	<table class="content-table">
+		<thead>
+			<tr>
+				<th>State</th>
+				<th>Total Confirmed cases</th>
+				<th>Cured/Discharged</th>
+				<th>Deaths</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for state_name, data in states.items() %}
+				<tr>
+					<td>{{ state_name }}</td>
+					<td>{{ data['Total Confirmed cases'] }}</td>
+					<td>{{ data['Cured/Discharged'] }}</td>
+					<td>{{ data['Death'] }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</body>
+{% endblock %}

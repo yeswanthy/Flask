@@ -1,0 +1,25 @@
+{% extends 'basic.jinja2' %}
+
+{% block content %}
+<body class"main">
+        <div id="wrapper">
+                <header>
+                        <h1>COVID-19 CORONAVIRUS PANDEMIC</h1>
+                </header>
+                <nav>
+                        <ul class="main_menu">
+                                <li><a href="{{ url_for('about') }}"> About&nbsp;&nbsp;&nbsp;&nbsp; </a></li>
+                                <li><a href="#"> Countries data&nbsp;&nbsp;&nbsp;&nbsp; </a></li>
+                                <li><a href="{{ url_for('india', state_name=state_name) }}"> India data&nbsp;&nbsp;&nbsp;&nbsp; </a></li>
+
+                        </ul>
+                </nav>
+                <h1 class="cases">Coronavirus Cases:</h1>
+                <p>2,119,700</p>
+                <h1 class="cases">Deaths:</h1>
+                <p>141,971</p>
+                <h1 class="cases">Recovered:</h1>
+                <p>535,513</p>
+        </div>
+</body>
+{% endblock %}

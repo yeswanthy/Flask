@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>COVID‑19 Information & Resources</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='covid.jpg') }}">
+</head>
+
+<header>
+	<div class="navbar-header">
+		<a class="navbar-brand" href="/">
+			<img style="max-width:100px; margin-top: -7px;" src="{{ url_for('static', filename='images/covid.jpg') }}">
+		</a>
+	</div>
+	<div class = "container-fluid">
+                <a href="/dashboard/"><button type="button" class="btn btn-primary" aria-label="Left Align" style="margin-top: 5px; margin-bottom: 5px; height: 44px; margin-right: 15px">
+                  <span class="glyphicon glyphicon-off" aria-hidden="true"></span> Start Learning
+                </button></a>
+        	<div style="margin-right: 10px; margin-left: 15px; margin-top: 5px; margin-bottom: 5px;"  class="container-fluid">
+		</div>
+	</div>
+	<ul class="nav navbar-nav navbar-right">
+                <li class="active">
+                        <a href="#">Home</a>
+                </li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">...</a></li>
+        </ul>
+</header>
+
+
+<body>
+	<h2>
+	<a href="{{ url_for('menu') }}">Home</a>
+	</h2>
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>
